@@ -1,0 +1,59 @@
+.fondo{
+    background-image: url(../recursos/images/fonditofondo.jpg) ;
+    background-size: cover;
+    height: 790px;
+    margin-top: -190px;
+   
+}
+
+header{
+    height: 200px;
+}
+
+.bg-header{
+    background-image: url(../recursos/images/marcoarriba.png) ;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+}
+.card{
+    
+    margin-left: 420px;
+    top: 223px;
+    height: 406px;
+    width: 540px;
+    border-radius: 0px;
+    
+}
+.card-body{
+  display: flex;
+  justify-content: center;
+}
+
+.btn{
+    font-size: larger;
+    margin-left: 170px;
+    display: flex
+;
+    justify-content: center;
+    height: 47px;
+    width: 201px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+}
+.trompetas{
+    margin-top: -9px;
+    height: 321px;
+    width: 480px;
+}
+
+.ver{
+height: 100px;
+}
+.tinta{
+    margin-top: 250px;
+}
+.bandas12{
+    color: white;
+    text-align: center;
+}

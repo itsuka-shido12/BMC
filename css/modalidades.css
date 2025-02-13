@@ -1,0 +1,29 @@
+*{
+    margin: 18px;
+}
+.texto{
+    
+    text-align: center;
+}
+.texto2{
+    margin-top: 80px;
+    font-size: 30px;
+
+   
+}
+.texto3{
+    margin-top: 10px;
+    font-size: 30px;
+    
+   
+}
+.texto4{
+    margin-top: 20px;
+    font-size: 30px;
+    
+   
+}
+.titulo{
+    
+    width: 600px;
+}

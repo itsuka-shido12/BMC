@@ -1,0 +1,29 @@
+p{
+    font-size: 25px;
+    font-size: larger;
+}
+h1{
+    margin-top: 100px;
+    
+    text-align: center;s
+}
+img{
+    height: 380px;
+    margin-top: 100px;
+    
+}
+.container{
+   margin-left: 150px;
+   
+}
+.chulo{
+    margin-top: -700px;   
+    height: 80px;
+    margin-left: 500px;
+}
+.flecha{
+    width: 100px;
+    height: 100px;
+    margin-left: -100px;
+    margin-top: -10px;
+}

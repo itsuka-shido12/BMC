@@ -1,0 +1,16 @@
+.texto{
+    
+    text-align: center;
+}
+.texto2{
+    margin-top: 80px;
+    font-size: 30px;
+
+    text-align: center;
+}
+.flecha{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
