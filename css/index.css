@@ -18,19 +18,15 @@ header{
   justify-content: center;
 }
 
-.btn {
-    /* font-size: larger; */
-    /* margin-left: 170px; */
-    /* display: flex
-; */
+/* .btn {
+
     justify-content: center;
-    /* height: 47px; */
-    /* width: 201px; */
+
     background-color: black;
     border-radius: 0;
     color: white;
     margin-bottom: 15px;
-}
+} */
 .trompetas {
     /* margin-top: -9px; */
     height: 269px;
@@ -45,4 +41,16 @@ header{
 .tinta{
   /*   margin-top: 250px; */
   width: 100%;
+}
+
+.form-control {
+    
+border-radius: 15px;
+   background-color: rgb(0, 0, 0);
+}
+.btn2{
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    
 }
