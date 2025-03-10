@@ -99,5 +99,15 @@ text-align: center;
 }
 .flecha{
     width: 100px;
-    margin-left: -100px;
+    
+}
+.form-control {
+
+    border-radius: 15px;
+   background-color: rgb(0, 0, 0);
+}
+.btn{
+    border-radius: 15px;
+    background-color: rgb(255, 255, 255);
+    color: black;
 }
