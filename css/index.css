@@ -18,15 +18,15 @@ header{
   justify-content: center;
 }
 
-/* .btn {
+.btn {
 
     justify-content: center;
 
     background-color: black;
     border-radius: 0;
     color: white;
-    margin-bottom: 15px;
-} */
+    margin-bottom: 5px;
+} 
 .trompetas {
     /* margin-top: -9px; */
     height: 269px;
@@ -48,12 +48,13 @@ header{
 border-radius: 15px;
    background-color: rgba(0, 0, 0, 0);
 }
+.buscador {
+    background-color: rgba(255, 255, 255, 0);
+   color: black;
+}
 .btn2{
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     color: black;
     
-}
-.buscador {
-    background-color: rgb(255, 255, 255);
 }

@@ -98,16 +98,24 @@ text-align: center;
     
 }
 .flecha{
-    width: 100px;
+    width: 41px;
     
 }
 .form-control {
-
+    
     border-radius: 15px;
-   background-color: rgb(0, 0, 0);
-}
+       background-color: rgba(0, 0, 0, 0);
+    }
+    .buscador {
+        background-color: rgba(255, 255, 255, 0);
+       color: black;
+    }
 .btn{
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     color: black;
 }
+.btn-inicio{
+    border-radius: 20px;
+    margin-top: 1%;
+  }

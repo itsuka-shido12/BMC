@@ -1,6 +1,6 @@
-img{
-    width: 1000px;
-    margin-left: 115px;
+.imagenes{
+    width: 90%;
+    margin: auto;
 }
 .Carga{
     width: 500px;
@@ -18,6 +18,19 @@ img{
     margin-left: 634px;
 }
 .flecha{
-    width: 100px;
+    width: 41px;
    
+}
+.btn-inicio{
+    border-radius: 20px;
+    margin-top: 1%;
+  }
+.form-control {
+    
+border-radius: 15px;
+   background-color: rgba(0, 0, 0, 0);
+}
+.buscador {
+    background-color: rgba(255, 255, 255, 0);
+   color: black;
 }
