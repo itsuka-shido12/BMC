@@ -9,10 +9,11 @@
     <style>
         .sidebar {
             height: 100vh;
-            width: 250px;
+            width: 280px;
             position: fixed;
-            background-color: #343a40;
-            padding-top: 20px;
+            background-color: #0678e9;
+            background-image: url(../recursos/images/fonditofondo.jpg);
+            padding-top: 30px;
         }
         .sidebar a {
             padding: 10px;
@@ -22,11 +23,11 @@
             display: block;
         }
         .sidebar a:hover {
-            background-color: #495057;
+            background-color: #529de9;
         }
         .content {
             margin-left: 260px;
-            padding: 20px;
+            padding: 40px;
         }
         .avatar-container img {
             width: 80px;
@@ -36,14 +37,14 @@
             margin: 5px;
         }
         .selected-avatar {
-            border: 3px solid #5a6979;
+            border: 3px solid #f80c0c;
         }
         .profile-icon {
             position: absolute;
             top: 10px;
             right: 20px;
-            width: 50px;
-            height: 50px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             cursor: pointer;
         }
@@ -70,9 +71,9 @@
         <div id="perfil" class="mt-4">
             <h4>Selecciona un Avatar de BMC</h4>
             <div class="avatar-container">
-                <img src="./recursos/avatares/mabel.png" alt="Avatar 1" onclick="selectAvatar(this)">
-                <img src="avatar2.png" alt="Avatar 2" onclick="selectAvatar(this)">
-                <img src="avatar3.png" alt="Avatar 3" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/mabel.png" alt="Avatar 1" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/avatares-02.png" alt="Avatar 2" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/avatares-03.png" alt="Avatar 3" onclick="selectAvatar(this)">
             </div>
         </div> 
     </div>
