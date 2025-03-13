@@ -119,3 +119,26 @@ text-align: center;
     border-radius: 20px;
     margin-top: 1%;
   }
+  .btn-inicio{
+    border-radius: 20px;
+    margin-top: 1%;
+  }
+  #buscador{
+    color: black;
+  }
+  
+ #buscador::placeholder{
+    color: black!important;
+ }
+ .form-control:focus {
+    color: var(--bs-body-color);
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #000000;
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0);
+}
+.btn{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border-color: #000000;
+}
