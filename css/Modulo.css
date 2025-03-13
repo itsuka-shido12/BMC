@@ -1,13 +1,9 @@
-.imagenes{
-    width: 90%;
+.imagenes {
+    width: 100%;
     margin: auto;
 }
 .Carga{
-    width: 500px;
-    height: 80px;
-    margin-left: 393px;
-  
- 
+    width: 400px;
 }
 .arriba{
    width: 200px; 
