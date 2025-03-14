@@ -54,6 +54,8 @@
     <img src="avatar1.png" alt="Perfil" class="profile-icon" onclick="location.href='#perfil'">
     <div class="sidebar">
         <h4 class="text-white text-center">Usuario</h4>
+        <a href="../index.html">Inicio</a>
+
         <a href="#perfil">Perfil</a>
         <a href="#progreso">Progreso</a>
         <a href="#configuracion">Configuración</a>
@@ -78,11 +80,36 @@
         </div> 
     </div>
     <script>
-        function selectAvatar(element) {
-            document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
-            element.classList.add('selected-avatar');
-            document.querySelector('.profile-icon').src = element.src;
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatarContainer = document.querySelector('.avatar-container');
+            const profileIcon = document.querySelector('.profile-icon');
+    
+            // Cargar avatar desde localStorage si existe
+            const savedAvatar = localStorage.getItem('selectedAvatar');
+            if (savedAvatar) {
+                profileIcon.src = savedAvatar;
+            }
+    
+            // Función para seleccionar un avatar
+            function selectAvatar(element) {
+                document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
+                element.classList.add('selected-avatar');
+    
+                // Guardar en localStorage
+                localStorage.setItem('selectedAvatar', element.src);
+    
+                // Cambiar el icono de perfil
+                profileIcon.src = element.src;
+            }
+    
+            // Asignar evento a cada avatar
+            avatarContainer.querySelectorAll("img").forEach(img => {
+                img.addEventListener("click", function () {
+                    selectAvatar(this);
+                });
+            });
+        });
     </script>
+    
 </body>
 </html>
