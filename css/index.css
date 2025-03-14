@@ -63,18 +63,18 @@ border-radius: 15px;
     margin-top: 1%;
   }
   #buscador{
-    color: black;
+    color: rgb(255, 255, 255);
   }
   
  #buscador::placeholder{
-    color: black!important;
+    color: rgb(255, 255, 255)!important;
  }
  .form-control:focus {
     color: var(--bs-body-color);
     background-color: rgba(0, 0, 0, 0);
-    border-color: #000000;
+    border-color: #ffffff;
     outline: 0;
-    box-shadow: 0 0 0 .25rem rgba(0, 0, 0, 0);
+    box-shadow: 0 0 0 .25rem rgba(255, 255, 255, 0);
 }
 .btn{
     color: rgb(255, 255, 255);

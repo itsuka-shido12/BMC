@@ -5,9 +5,7 @@
     border-radius: 0px;
     
 }
-.container{
-margin-left: 200px;
-}
+
 p{
     color: white;
     text-align: center;
@@ -15,8 +13,7 @@ p{
     font-size: 30px;
 }
 .flecha{
-    width: 100px;
+    
     height: 100px;
-    margin-left: -100px;
-    margin-top: -60px;
+    
 }
