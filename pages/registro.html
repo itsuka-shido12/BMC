@@ -46,54 +46,42 @@
         </ul>
       </div> -->
   
-      
-  <main class="form-signin w-100 m-auto">
-    <form>
       <a href="../index.html">
+        <button class="btn-inicio">
 
-        <img class="logonegro" src="../recursos/images/logonegro.png" alt="" width="72" height="57">
-      </a>
-      <h1 class="h3 mb-3 text-center fw-normal">BIENVENIDO <br> BMC</h1>
-  
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+    <img class="flecha" src="../recursos/images/tecla-de-flecha-izquierda.png" alt=""> 
+  </a>Volver al inicio
+</button>
+      <main class="form-signin w-100 m-auto">
+        <form id="formRegistro">
+          
+          <h1 class="h3 mb-3 text-center fw-normal">BIENVENIDO <br> BMC</h1>
+          
+          <div class="form-floating">
+        <input type="email" class="form-control" id="inputUserName" placeholder="name@example.com">
         <label for="floatingInput">Correo electronico</label>
       </div>
       <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+        <input type="password" class="form-control" id="inputUserPass" placeholder="Password">
         <label for="floatingPassword">Contraseña</label>
       </div>
-      <h1 class="texto align-items-center">¿No tienes una cuenta?<a href="../pages/inicio_sesion.html"> Crear cuenta</h1></a>
+      <div class="form-floating">
+        <input type="Date" class="form-control" id="inputUserFecha" placeholder="Password">
+        <label for="floatingPassword">Fecha de nacimiento</label>
+      </div>
+      
+
+     
+      <h1 class="texto align-items-center">¿Ya tienes una cuenta? <a href="../pages/registro.html">Iniciar sesion</h1></a>
       <div class="form-check text-start my-3">
        
       </div>
+      
+      
       <button class="btn btn-primary w-100 py-2" type="submit">Continuar</button>
-      <div class="card ">
-        <div class="card-body d-flex align-items-center gap-3">
-          <!-- incluir ícono de bootstrap o fotawesome -->
-          <i class="bi bi-google text-white fs-4"></i>
-          <span class="text-black mb-0">
+      
 
-            Continuar con Google
-          </span>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body d-flex align-items-center gap-3">
-          <!-- incluir ícono de bootstrap o fotawesome -->
-          <i class="bi bi-apple text-white fs-3"></i>
-          <span class="text-black mb-0">
-            Continuar con Apple
-          </span>
-        </div>
-      </div><div class="card">
-        <div class="card-body d-flex align-items-center gap-3">
-          <i class="bi bi-microsoft text-white fs-3"></i>
-          <span class="text-black mb-0">
-
-            Continuar con Microsoft
-          </span>
-        </div>
+      <h1 class="texto align-items-center"></h1>
       </div>
     </form>
   </main>
@@ -102,8 +90,8 @@
 
 
 
-
-
+  <script src="../js/registro.js"></script>  
+ 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
