@@ -19,17 +19,17 @@ img{
 }
 
 .max-width-categorias{
-    max-width: 768px ;
+/*     max-width: 768px ; */
     margin: 50px auto;
 
     
 }
 .max-width-categorias p{
-text-align: center;
+/* text-align: center; */
 }
 .texto{
-   
-   margin-top: 300px;
+   /* 
+   margin-top: 300px; */
 }
 .texto1{
    

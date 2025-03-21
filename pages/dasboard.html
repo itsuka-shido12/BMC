@@ -9,10 +9,11 @@
     <style>
         .sidebar {
             height: 100vh;
-            width: 250px;
+            width: 280px;
             position: fixed;
-            background-color: #343a40;
-            padding-top: 20px;
+            background-color: #0678e9;
+            background-image: url(../recursos/images/fonditofondo.jpg);
+            padding-top: 30px;
         }
         .sidebar a {
             padding: 10px;
@@ -22,11 +23,11 @@
             display: block;
         }
         .sidebar a:hover {
-            background-color: #495057;
+            background-color: #529de9;
         }
         .content {
             margin-left: 260px;
-            padding: 20px;
+            padding: 40px;
         }
         .avatar-container img {
             width: 80px;
@@ -36,14 +37,14 @@
             margin: 5px;
         }
         .selected-avatar {
-            border: 3px solid #5a6979;
+            border: 3px solid #f80c0c;
         }
         .profile-icon {
             position: absolute;
             top: 10px;
             right: 20px;
-            width: 50px;
-            height: 50px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
             cursor: pointer;
         }
@@ -53,13 +54,15 @@
     <img src="avatar1.png" alt="Perfil" class="profile-icon" onclick="location.href='#perfil'">
     <div class="sidebar">
         <h4 class="text-white text-center">Usuario</h4>
+        <a href="../index.html">Inicio</a>
+
         <a href="#perfil">Perfil</a>
         <a href="#progreso">Progreso</a>
         <a href="#configuracion">Configuración</a>
         <a href="#logout">Cerrar Sesión</a>
     </div>
     <div class="content">
-        <h2>Bienvenido a tu Panel</h2>
+        <h2>Bienvenido a tu Perfil</h2>
         <p>Aquí puedes ver tu progreso y gestionar tu cuenta.</p>
         <div id="progreso" class="mt-4">
             <h4>Progreso en los módulos</h4>
@@ -70,18 +73,43 @@
         <div id="perfil" class="mt-4">
             <h4>Selecciona un Avatar de BMC</h4>
             <div class="avatar-container">
-                <img src="avatar1.png" alt="Avatar 1" onclick="selectAvatar(this)">
-                <img src="avatar2.png" alt="Avatar 2" onclick="selectAvatar(this)">
-                <img src="avatar3.png" alt="Avatar 3" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/mabel.png" alt="Avatar 1" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/avatares-02.png" alt="Avatar 2" onclick="selectAvatar(this)">
+                <img src="../recursos/avatares/avatares-03.png" alt="Avatar 3" onclick="selectAvatar(this)">
             </div>
-        </div>
+        </div> 
     </div>
     <script>
-        function selectAvatar(element) {
-            document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
-            element.classList.add('selected-avatar');
-            document.querySelector('.profile-icon').src = element.src;
-        }
+        document.addEventListener("DOMContentLoaded", function () {
+            const avatarContainer = document.querySelector('.avatar-container');
+            const profileIcon = document.querySelector('.profile-icon');
+    
+            // Cargar avatar desde localStorage si existe
+            const savedAvatar = localStorage.getItem('selectedAvatar');
+            if (savedAvatar) {
+                profileIcon.src = savedAvatar;
+            }
+    
+            // Función para seleccionar un avatar
+            function selectAvatar(element) {
+                document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
+                element.classList.add('selected-avatar');
+    
+                // Guardar en localStorage
+                localStorage.setItem('selectedAvatar', element.src);
+    
+                // Cambiar el icono de perfil
+                profileIcon.src = element.src;
+            }
+    
+            // Asignar evento a cada avatar
+            avatarContainer.querySelectorAll("img").forEach(img => {
+                img.addEventListener("click", function () {
+                    selectAvatar(this);
+                });
+            });
+        });
     </script>
+    
 </body>
 </html>
