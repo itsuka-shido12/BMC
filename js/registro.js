@@ -9,9 +9,28 @@ const inputUserPass = document.querySelector("#inputUserPass")
 
 function registroDatos (e){
     e.preventDefault()
-    localStorage.setItem('user',inputUserName.value)
-    localStorage.setItem('password',inputUserPass.value)
-    localStorage.setItem('Fecha de nacimiento',inputUserFecha.value) 
+    
+    let user = {
+        user:inputUserName.value,
+        pass: inputUserPass.value,
+        Date: inputUserFecha.value,
+        correo: "admin@admin.com",
+        apodo:"pep",
+        logged:false,
+        progreso:0,
+        certificado: false
+    }
+
+    console.log(inputUserName.value)
+    console.log(inputUserPass.value)
+
+    const users = JSON.parse(localStorage.getItem("user")) || [];
+
+    users.push(user)
+
+    localStorage.setItem('user', JSON.stringify (users))
+    //localStorage.setItem('password',inputUserPass.value) 
+    //localStorage.setItem('Fecha de nacimiento',inputUserFecha.value) 
 
     const cajitaMensaje = document.createElement('p');
     cajitaMensaje.innerHTML = `ya tienes cuenta <a href="./inicio_sesion.html">Iniciar sesion</a>`
