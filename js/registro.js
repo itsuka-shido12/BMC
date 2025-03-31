@@ -26,6 +26,14 @@ function registroDatos (e){
 
     const users = JSON.parse(localStorage.getItem("user")) || [];
 
+    for (let i = 0; i < users.length; i++) {
+        if(users [i].user === user.user){
+            alert("El usuario ya existe 🤣")
+            return
+        }
+        
+    }
+
     users.push(user)
 
     localStorage.setItem('user', JSON.stringify (users))
