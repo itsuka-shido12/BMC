@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+ <html lang="es">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Examen de Certificación</title>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+     <style>
+         body { 
+             font-family: 'Quicksand', sans-serif; 
+             background-color: #4f5ebe; 
+             color: #09091a; 
+         }
+         .container {
+             max-width: 600px;
+             background: #aee3ff;
+             padding: 20px;
+             border-radius: 10px;
+             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+             margin-top: 50px;
+         }
+         h2 {
+             text-align: center;
+             font-weight: bold;
+         }
+         .btn-primary {
+             background-color: #6072b8;
+             border: none;
+         }
+         .btn-primary:hover {
+             background-color: #597bc4;
+         }
+         .result {
+             margin-top: 20px;
+             font-weight: bold;
+             text-align: center;
+         }
+     </style>
+ </head>
+ <body>
+     <div class="container">
+         <h2>Examen de Certificación</h2>
+         <form id="examForm">
+             <div class="mb-3">
+                 <p><strong>1. ¿Comó se crearon las bandas de marcha?</strong></p>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q1" value="a">
+                     <label class="form-check-label">Una variacion de las bandas de rock</label>
+                 </div>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q1" value="b">
+                     <label class="form-check-label">Provino de las bandas de guerra que motivaban a sus soldado</label>
+                 </div>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q1" value="c">
+                     <label class="form-check-label">se crearon por el circo</label>
+                 </div>
+             </div>
+             
+             <div class="mb-3">
+                 <p><strong>2. Aparte del director ¿Quién dirige la banda en un desfile?</strong></p>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q2" value="a">
+                     <label class="form-check-label">Se dirige sola</label>
+                 </div>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q2" value="b">
+                     <label class="form-check-label">La dirige el Baston mayor</label>
+                 </div>
+                 <div class="form-check">
+                     <input class="form-check-input" type="radio" name="q2" value="c">
+                     <label class="form-check-label">La dirige la logistica</label>
+                 </div>
+             </div>
+             
+             <!-- Preguntas adicionales -->
+             <script>
+                 let preguntas = [
+                     { pregunta: "3. ¿   ?", opciones: ["Tierra", "Marte", "Júpiter"], respuesta: "c" },
+                     { pregunta: "4. ¿Quién escribió 'Cien años de soledad'?", opciones: ["Pablo Neruda", "Gabriel García Márquez", "Mario Vargas Llosa"], respuesta: "b" },
+                     { pregunta: "5. ¿En qué año comenzó la Segunda Guerra Mundial?", opciones: ["1914", "1939", "1945"], respuesta: "b" },
+                     { pregunta: "6. ¿Cuál es el metal más abundante en la corteza terrestre?", opciones: ["Hierro", "Aluminio", "Cobre"], respuesta: "b" },
+                     { pregunta: "7. ¿Cuál es el océano más grande del mundo?", opciones: ["Atlántico", "Índico", "Pacífico"], respuesta: "c" },
+                     { pregunta: "8. ¿Cuál es la fórmula química del agua?", opciones: ["H2O", "CO2", "O2"], respuesta: "a" },
+                     { pregunta: "9. ¿Quién pintó la Mona Lisa?", opciones: ["Vincent van Gogh", "Leonardo da Vinci", "Pablo Picasso"], respuesta: "b" },
+                     { pregunta: "10. ¿Cuál es la capital de Japón?", opciones: ["Pekín", "Seúl", "Tokio"], respuesta: "c" }
+                 ];
+                 
+                 let examForm = document.getElementById("examForm");
+                 preguntas.forEach((item, index) => {
+                     let div = document.createElement("div");
+                     div.className = "mb-3";
+                     div.innerHTML = `<p><strong>${item.pregunta}</strong></p>`;
+                     item.opciones.forEach((opcion, i) => {
+                         div.innerHTML += `
+                             <div class="form-check">
+                                 <input class="form-check-input" type="radio" name="q${index + 3}" value="${String.fromCharCode(97 + i)}">
+                                 <label class="form-check-label">${opcion}</label>
+                             </div>`;
+                     });
+                     examForm.insertBefore(div, examForm.lastElementChild);
+                 });
+             </script>
+             
+             <button type="button" class="btn btn-primary w-100" onclick="calcularResultado()">Enviar</button>
+         </form>
+         
+         <p class="result" id="resultado"></p>
+     </div>
+     
+     <script>
+         function calcularResultado() {
+             let respuestasCorrectas = { q1: 'b', q2: 'b', q3: 'c', q4: 'b', q5: 'b', q6: 'b', q7: 'c', q8: 'a', q9: 'b', q10: 'c' };
+             let puntaje = 0;
+             let totalPreguntas = Object.keys(respuestasCorrectas).length;
+             
+             for (let pregunta in respuestasCorrectas) {
+                 let seleccionada = document.querySelector(`input[name="${pregunta}"]:checked`);
+                 if (seleccionada && seleccionada.value === respuestasCorrectas[pregunta]) {
+                     puntaje++;
+                 }
+             }
+             
+             let resultadoTexto = `Puntaje: ${puntaje} de ${totalPreguntas}`;
+             document.getElementById("resultado").innerText = resultadoTexto;
+         }
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ </body>
+ </html>
