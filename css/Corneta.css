@@ -13,14 +13,24 @@ img{
     margin-left: 100px;
     
 }
-.container{
-   margin-left: 150px;
-}
+
 .flecha{
     width: 100px;
     height: 100px;
     margin-left: -100px;
-    margin-top: -10px;
+   
+    transform: rotateZ(180deg);
+}
+.flecha2{
+    width: 100px;
+    height: 100px;
+    left: auto;
+}
+.Navegacion{
+    margin-top: -110px;
+    display: flex;
+    justify-content: space-between;
+
 }
 .chulo{
     margin-top: -700px;   

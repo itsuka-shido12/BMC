@@ -10,7 +10,18 @@
   <link rel="stylesheet" href="../css/Modulo.css">
   <title>Document</title>
 </head>
-
+<style>
+  .user-icon {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+  }
+</style>
+<img id="link-dasboard" src="../recursos/avatares/avatares-02.png" alt="Usuario" class="user-icon" onclick="location.href='../pages/dasboard.html'">
 <body>
   <header class="bg-header">
     <div class="container">
@@ -35,10 +46,10 @@
                     <button type="button" class="btn btn-outline-success">Buscar</button>
                   </form>
                   <li class="nav-item">
-                    <a class="nav-link active text-black" aria-current="page" href="./inicio_sesion.html">REGISTRO</a>
+                    <a id="link-registro" class="nav-link active text-black" aria-current="page" href="./registro.html">REGISTRO</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-black" href="./registro.html">INICIO</a>
+                    <a id="link-iniciar" class="nav-link text-black" href="./inicio_sesion.html">INICIO DE SESION</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link text-black" href="./bmc_info.html">BMC</a>
@@ -47,8 +58,11 @@
                     <a class="nav-link text-black" href="./Modalidades.html">CATEGORIAS</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link text-black" href="./modulos.html">CURSOS</a>
+                    <a id="link-cursos" class="nav-link text-black" href="./modulos.html">CURSOS</a>
                   </li>
+                  <li class="nav-item">
+                    <a id="link-cerrar" class="nav-link text-black" href="./cerrarsesion.html">CERRAR SESION</a>
+                </li>
 
                 </ul>
 
@@ -118,7 +132,7 @@
       </div>
 
     </div>
-
+    <script src="../js/index.js"></script>
 </body>
 
 </html>

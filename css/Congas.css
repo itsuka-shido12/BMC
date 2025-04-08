@@ -21,5 +21,17 @@ img{
     width: 100px;
     height: 100px;
     margin-left: -100px;
-    margin-top: -10px;
+   
+    transform: rotateZ(180deg);
+}
+.flecha2{
+    width: 100px;
+    height: 100px;
+    left: auto;
+}
+.Navegacion{
+    margin-top: -44px;
+    display: flex;
+    justify-content: space-between;
+
 }
