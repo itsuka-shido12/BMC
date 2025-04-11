@@ -22,8 +22,12 @@
        background-color: rgba(0, 0, 0, 0);
     }
     
-
+    .link-focus{
+        font-weight: bold;
+        text-decoration: underline;
+        }
 .btn-inicio{
+    padding: 5px 20px;
     border-radius: 20px;
     margin-top: 1%;
   }
@@ -46,3 +50,19 @@
     background-color: black;
     border-color: #000000;
 }
+.Redes {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    justify-content: center;
+    padding: 20px;
+    background-color: #222;
+    color: white;
+  }
+  .iconos {
+    display: flex;
+    gap: 20px; /* Espacio entre íconos */
+    margin-bottom: 10px; /* Espacio debajo de los íconos */
+  }
+
+
