@@ -17,8 +17,19 @@ function registroDatos (e){
         correo: "admin@admin.com",
         apodo:"pep",
         logged:false,
-        progreso:0,
-        certificado: false
+        progreso: 0,
+        certificado: false,
+        cursos:{
+            liras: false,
+            percusion: {
+                bombos: false,
+                redoblante: false,
+                platillos: false,
+                tambora:false
+            },
+            vientos: false,
+            partituras: false
+        }
     }
 
     console.log(inputUserName.value)

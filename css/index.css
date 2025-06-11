@@ -19,14 +19,21 @@ header{
 }
 
 .btn {
-
+    padding: 10px 20px;
     justify-content: center;
 
-    background-color: black;
+    background-color: white;
     border-radius: 0;
-    color: white;
+    color: black;
     margin-bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.481)!important;
 } 
+
+.btn:hover{
+    color: black!important;
+    background-color: white;
+}
+
 .trompetas {
     /* margin-top: -9px; */
     height: 269px;

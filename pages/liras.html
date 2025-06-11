@@ -1,47 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="../css/liras.css">
+    <link rel="stylesheet" href="../css/liras.css">
     <title>Document</title>
 </head>
+
 <body>
     <div class="container mt-0">
-        <a href="../pages/modulos.html">
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="../pages/modulos.html">
+
+                    <img class="flecha" src="../recursos/images/tecla-de-flecha-izquierda.png" alt="">
+                </a>
+            </li>
+    
+            <li id="estado" class="nav-item ms-auto d-flex align-items-center">
+                Estado: 
+                <!-- <img width="30" class="ms-3" src="../recursos/assets_mooc/Recurso 1.png" alt=""> --> 
+                <span class="ms-2">🔴</span>
+            </li>
+        </ul>
+        <!-- <a href="../pages/modulos.html">
 
             <img class="flecha" src="../recursos/images/tecla-de-flecha-izquierda.png" alt="">
-        </a>
+        </a> -->
         <div class="row ">
             <div class="col">
                 <h1>LIRAS</h1>
                 <br>
-                
-                <br>
-                <p>La lira de marcha es un instrumento musical de viento metal que se 
-                    destaca por su sonido brillante y penetrante, utilizado 
-                    tradicionalmente en bandas militares y desfiles. Su diseño 
-                    compacto y ligero la convierte en una opción popular entre 
-                    músicos que necesitan movilizarse mientras interpretan. 
-                    En este artículo, exploraremos a fondo las 
-                    características, ventajas y desventajas de la  lira de 
-                    marcha en comparación con otros  instrumentos similares, 
-                    como la  trompeta o el clarinete. </p>
-                </div>
-                <div class="col">
-                    <img src="../recursos/images/LIRAS.png" alt="">
-                    <img class="chulo" src="../recursos/assets_mooc/Recurso 1.png" alt="">
-                </div>
-        </div>
-        <div class="ratio ratio-16x9">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/sefGW__p6WE?si=wFHKbZSUbHibRXh9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-          </div>
+                <br>
+                <p>La lira de marcha es un instrumento musical de viento metal que se
+                    destaca por su sonido brillante y penetrante, utilizado
+                    tradicionalmente en bandas militares y desfiles. Su diseño
+                    compacto y ligero la convierte en una opción popular entre
+                    músicos que necesitan movilizarse mientras interpretan.
+                    En este artículo, exploraremos a fondo las
+                    características, ventajas y desventajas de la  lira de
+                    marcha en comparación con otros  instrumentos similares,
+                    como la  trompeta o el clarinete. </p>
+            </div>
+            <div class="col">
+                <img src="../recursos/images/LIRAS.png" alt="">
+                <!-- <img class="chulo" src="../recursos/assets_mooc/Recurso 1.png" alt=""> -->
+            </div>
+        </div>
+        <div>
+            <video id="videoLira" width="100%" height="500" controls>
+                <source src="../recursos/video/comercialBMC.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
     </div>
 
-    
+    <script src="../js/progresoLiras.js"></script>
+
 </body>
+
 </html>

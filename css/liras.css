@@ -6,24 +6,22 @@ p{
 h1{
     margin-top: 100px;
     
-    text-align: center;s
+    text-align: center;
 }
-img{
+/* img{
     height: 380px;
     margin-top: 100px;
     
-}
+} */
 .col{
     text-align: center;
 }
 
-.chulo{
+/* .chulo{
  margin-top: -200px;   
  height: 100px;
-}
+} */
 .flecha{
     width: 100px;
     height: 100px;
-    margin-left: -100px;
-    margin-top: -10px;
 }
