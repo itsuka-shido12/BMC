@@ -11,17 +11,13 @@
 </head>
 <style>
     .user-icon {
-        position: absolute;
-        top: 10px;
-        right: 20px;
         width: 50px;
         height: 50px;
         border-radius: 50%;
         cursor: pointer;
     }
 </style>
-<img id="link-dasboard" src="recursos/avatares/avatares-02.png" alt="Usuario" class="user-icon"
-    onclick="location.href='pages/dasboard.html'">
+
 
 <body>
     <div class="min-vh-100 fondo d-flex flex-column justify-content-between">
@@ -68,6 +64,12 @@
                                                 SESION</a>
 
                                         </li>
+                                        <li class="nav-item">
+                                           <img id="link-dasboard" src="recursos/avatares/avatares-02.png" alt="Usuario" class="user-icon ms-3"
+    onclick="location.href='pages/dasboard.html'">
+
+                                        </li>
+
 
                                     </ul>
 
@@ -89,7 +91,7 @@
                     </div>
                     <div class="ver d-flex justify-content-center gap-3">
                         <a href="./pages/Modalidades.html" class="btn ">VER CATEGORÍAS</a>
-                        <a href="./pages/registro.html" class="btn ">REGÍSTRATE</a>
+                        <a id="linkRegistrate" href="./pages/registro.html" class="btn ">REGÍSTRATE</a>
                     </div>
                 </div>
                 <!-- <div class="col-6">
