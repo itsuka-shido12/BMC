@@ -5,13 +5,13 @@ p{
 h1{
     margin-top: 100px;
     
-    text-align: center;s
+    text-align: center;
 }
-img{
+/* img{
     height: 380px;
     margin-top: 100px;
     
-}
+} */
 
 .chulo{
     margin-top: -200px;   
@@ -20,15 +20,12 @@ img{
    .flecha{
     width: 100px;
     height: 100px;
-    margin-left: -100px;
-   
-    transform: rotateZ(180deg);
 }
-.flecha2{
+/* .flecha2{
     width: 100px;
     height: 100px;
     left: auto;
-}
+} */
 .Navegacion{
     margin-top: -44px;
     display: flex;

@@ -13,7 +13,6 @@ function registroDatos (e){
     let user = {
         user:inputUserName.value,
         pass: inputUserPass.value,
-        Date: inputUserFecha.value,
         correo: "admin@admin.com",
         apodo:"pep",
         logged:false,
