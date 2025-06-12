@@ -13,6 +13,21 @@ for (let i = 0; i < users.length; i++) {
     }
 }
 
+function actulizaEstadoProgress(){
+    for (let i = 0; i < users.length; i++) {
+
+            if (users[i].logged && !users[i].lirasCompletado) {
+                console.log('Bienvenido 😎')
+                users[i].cursos.liras = true
+                users[i].progress += 25
+                users[i].lirasCompletado = true
+                localStorage.setItem("user", JSON.stringify(users))
+
+                return
+            }
+        }
+}
+
 
 video.addEventListener('timeupdate', function () {
     tiempoVisto = video.currentTime;
@@ -22,19 +37,7 @@ video.addEventListener('timeupdate', function () {
         estado.innerHTML = `
             Estado: <img width="30" class="ms-3" src="../recursos/assets_mooc/Recurso 1.png" alt="">
         `
-        for (let i = 0; i < users.length; i++) {
-
-            if (users[i].logged) {
-                console.log('Bienvenido 😎')
-                users[i].cursos.liras = true
-                users[i].progress = 25
-                localStorage.setItem("user", JSON.stringify(users))
-
-
-
-                return
-            }
-        }
+        actulizaEstadoProgress()
 
     } else {
         `Estado: <span class="ms-2">🔴</span>`
