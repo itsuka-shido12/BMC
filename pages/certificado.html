@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/certificado.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            position: relative;
+            padding: 1rem;
+            width: 1000px;
+            height: 600px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .certificate {
+            position: relative;
+            width: 100%;
+            background-color: rgb(231, 231, 231);
+            border: 3px solid rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            height: 550px;
+        }
+
+        .firmas {
+            margin-top: 100px;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+
+
+
+        }
+
+        .linea {
+            border-top: 1px solid black;
+            padding: 0px 15px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="certificate">
+            <img class="logo" src="../recursos/images/logobmc (1).png" alt="">
+
+
+            <h1>Diploma de graduación de <BR class="separado">BMC</BR></h1>
+            <h1>Nombre Del Alumno</h1>
+
+
+            <p>Demostró sus conocimientos en</p>
+            <h2>Aprendiz de bandas marcha</h2>
+            <div class="firmas">
+                <div style="text-align: center;">
+                    <img src="../recursos/images/Diseño_sin_título-removebg-preview.png" style="width: 300px!important;" alt="">
+                    <div class="linea">
+                        <p>Marvin Agudelo Villa</p>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <img src="../recursos/images/draw-signature (2).png" style="width: 60px!important;" alt="">
+                    <div class="linea">
+                        <p>Samara Cardona</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="boton">
+
+        <button class="boton" id="descargarPDF">Descargar PDF</button>
+    </div>
+
+</body>
+<script src="../js/certificado.js"></script>
+
+</html>
