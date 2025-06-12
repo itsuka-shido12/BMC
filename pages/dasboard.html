@@ -48,9 +48,11 @@
             border-radius: 50%;
             cursor: pointer;
         }
+
     </style>
 </head>
 <body>
+   
     <img src="avatar1.png" alt="Perfil" class="profile-icon" onclick="location.href='#perfil'">
     <div class="sidebar">
         <h4 class="text-white text-center">Usuario</h4>
@@ -69,6 +71,7 @@
             <div class="progress">
                 <div id="progreso-user" class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
             </div>
+            <a id="boton-certificado" class="btn btn-primary mt-4" href="./certificado.html">Descargar certificado</a>
         </div>
         <div id="perfil" class="mt-4">
             <h4>Selecciona un Avatar de BMC</h4>
@@ -80,6 +83,11 @@
         </div> 
     </div>
     <script>
+
+        const users = JSON.parse(localStorage.getItem("user")) || [];
+
+        
+
         document.addEventListener("DOMContentLoaded", function () {
             const avatarContainer = document.querySelector('.avatar-container');
             const profileIcon = document.querySelector('.profile-icon');
