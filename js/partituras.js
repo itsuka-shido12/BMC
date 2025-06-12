@@ -1,17 +1,21 @@
 
 const users = JSON.parse(localStorage.getItem('user'))
 
-const video = document.querySelector("#videoLira")
+const video = document.querySelector("#video")
 const estado = document.querySelector("#estado")
 
 
 for (let i = 0; i < users.length; i++) {
-    if (users[i].logged && users[i].cursos.liras) {
+    if (users[i].logged && users[i].cursos.partituras) {
         estado.innerHTML = `
             Estado: <img width="30" class="ms-3" src="../recursos/assets_mooc/Recurso 1.png" alt="">
         `
     }
 }
+
+
+
+console.log(users[0].progreso)
 
 
 video.addEventListener('timeupdate', function () {
@@ -26,8 +30,8 @@ video.addEventListener('timeupdate', function () {
 
             if (users[i].logged) {
                 console.log('Bienvenido 😎')
-                users[i].cursos.liras = true
-                users[i].progress = 25
+                users[i].cursos.partituras = true
+                users[i].progress += 25
                 localStorage.setItem("user", JSON.stringify(users))
 
 

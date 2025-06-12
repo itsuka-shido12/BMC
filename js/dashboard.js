@@ -9,7 +9,7 @@ for (let i = 0; i < user.length; i++){
     if(user[i].logged === true){
         saludoUser.textContent = `hola ${user[i].user}`
          /* progreso.textContent = `progreso ${user[i].progreso}` */
-         progresoUser.style.width = `${user[i].progreso}%`
-         progresoUser.textContent = `${user[i].progreso}%`
+         progresoUser.style.width = `${user[i].progress}%`
+         progresoUser.textContent = `${user[i].progress}%`
     }
 }

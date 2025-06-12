@@ -5,24 +5,24 @@ p{
 h1{
     margin-top: 100px;
     
-    text-align: center;s
+    text-align: center;
 }
-img{
+/* img{
    height: 300px;
     margin-top: 200px;
     
-}
+} */
 
 .chulo{
     margin-top: -800px;   
     height: 80px;
     margin-left: 500px;
 }
-.flecha{
+
+    .flecha{
     width: 100px;
     height: 100px;
-    margin-left: -100px;
-    margin-top: -10px;
 }
+
 
 

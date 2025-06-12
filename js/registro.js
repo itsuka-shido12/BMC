@@ -17,7 +17,7 @@ function registroDatos (e){
         correo: "admin@admin.com",
         apodo:"pep",
         logged:false,
-        progreso: 0,
+        progress: Number(0),
         certificado: false,
         cursos:{
             liras: false,
