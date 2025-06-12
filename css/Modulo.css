@@ -1,12 +1,24 @@
+a{
+  color: #000000;
+  text-decoration: none;
+}
 .imagenes {
     width: 100%;
     margin: auto;
+}
+.bg-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white;
+    box-shadow: 1px 1px 5px #9b9b9b;
 }
 .Carga{
     width: 400px;
 }
 .arriba{
-   width: 250px; 
+   width: 200px; 
    
 }
 .logo{
