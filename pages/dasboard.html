@@ -17,6 +17,9 @@
             background-image: url(../recursos/images/fonditofondo.jpg);
             padding-top: 30px;
         }
+        .bg-sidebar{
+            background-image: url(../recursos/images/fonditofondo.jpg);
+        }
 
         .sidebar a {
             padding: 10px;
@@ -32,7 +35,7 @@
 
         .content {
             margin-left: 260px;
-            padding: 40px;
+            padding: 10px 40px;
         }
 
         .avatar-container img {
@@ -48,89 +51,128 @@
         }
 
         .profile-icon {
-            position: absolute;
-            top: 10px;
-            right: 20px;
+
             width: 80px;
             height: 80px;
             border-radius: 50%;
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 768px) {
+            .sidebar {
+                display: none;
+            }
+
+            .content {
+                margin-left: 0px;
+                padding: 10px 10px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <img id="link-dasboard" src="../recursos/avatares/mabel.png" alt="Perfil" class="profile-icon"
-        onclick="location.href='#perfil'">
-    <div class="sidebar">
-        <h4 class="text-white text-center">Usuario</h4>
-        <a href="../index.html">Inicio</a>
 
-        <a href="./modulos.html">Cursos</a>
-        <!-- <a href="#progreso">Progreso</a> -->
-        <!-- <a href="#configuracion">Configuración</a> -->
-        <a href="./cerrarsesion.html">Cerrar Sesión</a>
-    </div>
-    <div class="content">
-        <h2 id="saludo-user">Bienvenido a tu Perfil</h2>
-        <p>Aquí puedes ver tu progreso y gestionar tu cuenta.</p>
-        <div id="progreso" class="mt-4">
-            <h4 id="progreso">Progreso en los módulos</h4>
-            <div class="progress">
-                <div id="progreso-user" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
-                    aria-valuemin="0" aria-valuemax="100">50%</div>
+    <div>
+        <div class="sidebar d-none d-md-block">
+            <h4 class="text-white text-center">Usuario</h4>
+            <a href="../index.html">Inicio</a>
+
+            <a href="./modulos.html">Cursos</a>
+            <!-- <a href="#progreso">Progreso</a> -->
+            <!-- <a href="#configuracion">Configuración</a> -->
+            <a href="./cerrarsesion.html">Cerrar Sesión</a>
+        </div>
+        <div class="content">
+            <div class="d-flex justify-content-between align-items-center">
+                <h2 id="saludo-user"></h2>
+                <img id="link-dasboard" src="../recursos/avatares/mabel.png" alt="Perfil" class="profile-icon mb-4"
+                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasPerfil" aria-controls="offcanvasPerfil">
+
             </div>
-             <!-- Button trigger modal -->
-            <button id="btn-modal-certificado" type="button" class="btn btn-primary mt-3 d-none" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Descargar certificado
-            </button>
+
+
+
 
             
-            <!-- <a id="boton-certificado" class="btn btn-primary mt-4" href="./certificado.html">Descargar certificado</a> -->
+            <p>Aquí puedes ver tu progreso y gestionar tu cuenta.</p>
+            <div id="progreso" class="mt-4">
+                <h4 id="progreso">Progreso en los módulos</h4>
+                <div class="progress">
+                    <div id="progreso-user" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                        aria-valuemin="0" aria-valuemax="100">50%</div>
+                </div>
+                <!-- Button trigger modal -->
+                <button id="btn-modal-certificado" type="button" class="btn btn-primary mt-3 d-none"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Descargar certificado
+                </button>
 
 
-           
+                <!-- <a id="boton-certificado" class="btn btn-primary mt-4" href="./certificado.html">Descargar certificado</a> -->
 
 
 
 
-        </div>
-        
-        <div id="perfil" class="mt-4">
-            <h4>Selecciona un Avatar de BMC</h4>
-            <div class="avatar-container">
-                <img src="../recursos/avatares/mabel.png" alt="Avatar 1" onclick="selectAvatar(this)">
-                <img src="../recursos/avatares/avatares-02.png" alt="Avatar 2" onclick="selectAvatar(this)">
-                <img src="../recursos/avatares/avatares-03.png" alt="Avatar 3" onclick="selectAvatar(this)">
+
+
+
+            </div>
+
+            <div id="perfil" class="mt-4">
+                <h4>Selecciona un Avatar de BMC</h4>
+                <div class="avatar-container">
+                    <img src="../recursos/avatares/mabel.png" alt="Avatar 1" onclick="selectAvatar(this)">
+                    <img src="../recursos/avatares/avatares-02.png" alt="Avatar 2" onclick="selectAvatar(this)">
+                    <img src="../recursos/avatares/avatares-03.png" alt="Avatar 3" onclick="selectAvatar(this)">
+                </div>
             </div>
         </div>
     </div>
+
+
+
     <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">Escríbe tu nombre</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <form>
-                                <div class="mb-3">
-                                    <label for="nombre" class="form-label">Nombre que saldrá en tú cerificado</label>
-                                    <input type="text" class="form-control" id="nombre"
-                                        aria-describedby="emailHelp" placeholder="Escribe tu nombre...">
-                                    </div>
-                                    <button id="descarga-cert" type="button" class="btn btn-primary">Descargar certificado</button>
-                                </div>
-                            </form>
-                            
-                        </div>
-                        
-                    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Escríbe tu nombre</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre que saldrá en tú cerificado</label>
+                            <input type="text" class="form-control" id="nombre" aria-describedby="emailHelp"
+                                placeholder="Escribe tu nombre...">
+                        </div>
+                        <button id="descarga-cert" type="button" class="btn btn-primary">Descargar certificado</button>
+                </div>
+                </form>
+
             </div>
+
+        </div>
+    </div>
+
+
+    <div class="offcanvas offcanvas-end bg-sidebar" tabindex="-1" id="offcanvasPerfil" aria-labelledby="offcanvasPerfilLabel">
+        <div class="offcanvas-header text-white">
+            <h5 class="offcanvas-title" id="offcanvasPerfilLabel">Usuario</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                aria-label="Cerrar"></button>
+        </div>
+        <div class="offcanvas-body">
+            <a href="../index.html" class="d-block mb-2 text-decoration-none text-white">Inicio</a>
+            <a href="./modulos.html" class="d-block mb-2 text-decoration-none text-white">Cursos</a>
+            <a href="./cerrarsesion.html" class="d-block mb-2 text-decoration-none text-white">Cerrar Sesión</a>
+        </div>
+    </div>
+
+
+    </div>
     <script>
 
         const users = JSON.parse(localStorage.getItem("user")) || [];
@@ -140,21 +182,21 @@
         const inputNombre = document.querySelector("#nombre")
 
         for (let i = 0; i < users.length; i++) {
-                if (users[i].logged && users[i].progress >= 100) {
-                    console.log("aparecebtn")
-                    
-                    btnModalCertificado.classList.remove("d-none")
-                    btnModalCertificado.classList.add("d-block")
-                    
-                }
+            if (users[i].logged && users[i].progress >= 100) {
+                console.log("aparecebtn")
+
+                btnModalCertificado.classList.remove("d-none")
+                btnModalCertificado.classList.add("d-block")
+
             }
+        }
 
         descargaCert.addEventListener("click", () => {
-         
+
             console.log("first")
             for (let i = 0; i < users.length; i++) {
-                if (users[i].logged ) {
-                    
+                if (users[i].logged) {
+
                     users[i].nombreCertificado = inputNombre.value;
                     localStorage.setItem("user", JSON.stringify(users));
                     window.location = "./certificado.html"
