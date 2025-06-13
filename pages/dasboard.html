@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panel de Usuario</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
+    <link rel="icon" href="../recursos/avatares/mabel.png">
     <style>
         .sidebar {
             height: 100vh;
@@ -15,6 +17,7 @@
             background-image: url(../recursos/images/fonditofondo.jpg);
             padding-top: 30px;
         }
+
         .sidebar a {
             padding: 10px;
             text-decoration: none;
@@ -22,13 +25,16 @@
             color: white;
             display: block;
         }
+
         .sidebar a:hover {
             background-color: #529de9;
         }
+
         .content {
             margin-left: 260px;
             padding: 40px;
         }
+
         .avatar-container img {
             width: 80px;
             height: 80px;
@@ -36,9 +42,11 @@
             cursor: pointer;
             margin: 5px;
         }
+
         .selected-avatar {
             border: 3px solid #f80c0c;
         }
+
         .profile-icon {
             position: absolute;
             top: 10px;
@@ -50,16 +58,17 @@
         }
     </style>
 </head>
+
 <body>
-    <img src="avatar1.png" alt="Perfil" class="profile-icon" onclick="location.href='#perfil'">
+    <img id="link-dasboard" src="../recursos/avatares/mabel.png" alt="Perfil" class="profile-icon" onclick="location.href='#perfil'">
     <div class="sidebar">
         <h4 class="text-white text-center">Usuario</h4>
         <a href="../index.html">Inicio</a>
 
-        <a href="#perfil">Perfil</a>
-        <a href="#progreso">Progreso</a>
-        <a href="#configuracion">Configuración</a>
-        <a href="#logout">Cerrar Sesión</a>
+        <!-- <a href="#perfil">Perfil</a> -->
+        <!-- <a href="#progreso">Progreso</a> -->
+        <!-- <a href="#configuracion">Configuración</a> -->
+        <a href="./cerrarsesion.html">Cerrar Sesión</a>
     </div>
     <div class="content">
         <h2 id="saludo-user">Bienvenido a tu Perfil</h2>
@@ -67,7 +76,8 @@
         <div id="progreso" class="mt-4">
             <h4 id="progreso">Progreso en los módulos</h4>
             <div class="progress">
-                <div id="progreso-user" class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
+                <div id="progreso-user" class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0"
+                    aria-valuemin="0" aria-valuemax="100">50%</div>
             </div>
         </div>
         <div id="perfil" class="mt-4">
@@ -77,40 +87,41 @@
                 <img src="../recursos/avatares/avatares-02.png" alt="Avatar 2" onclick="selectAvatar(this)">
                 <img src="../recursos/avatares/avatares-03.png" alt="Avatar 3" onclick="selectAvatar(this)">
             </div>
-        </div> 
+        </div>
     </div>
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const avatarContainer = document.querySelector('.avatar-container');
-            const profileIcon = document.querySelector('.profile-icon');
-    
-            // Cargar avatar desde localStorage si existe
-            const savedAvatar = localStorage.getItem('selectedAvatar');
-            if (savedAvatar) {
-                profileIcon.src = savedAvatar;
+    function selectAvatar(element) {
+        const users = JSON.parse(localStorage.getItem("user")) || [];
+        const profileIcon = document.querySelector('.profile-icon');
+
+        document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
+        element.classList.add('selected-avatar');
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].logged) {
+                users[i].avatar = element.src;
+                profileIcon.src = users[i].avatar;
+                localStorage.setItem("user", JSON.stringify(users));
+                return;
             }
-    
-            // Función para seleccionar un avatar
-            function selectAvatar(element) {
-                document.querySelectorAll('.avatar-container img').forEach(img => img.classList.remove('selected-avatar'));
-                element.classList.add('selected-avatar');
-    
-                // Guardar en localStorage
-                localStorage.setItem('selectedAvatar', element.src);
-    
-                // Cambiar el icono de perfil
-                profileIcon.src = element.src;
+        }
+
+        profileIcon.src = element.src;
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const users = JSON.parse(localStorage.getItem("user")) || [];
+        const profileIcon = document.querySelector('.profile-icon');
+
+        users.forEach(item => {
+            if (item.logged) {
+                profileIcon.src = item.avatar;
             }
-    
-            // Asignar evento a cada avatar
-            avatarContainer.querySelectorAll("img").forEach(img => {
-                img.addEventListener("click", function () {
-                    selectAvatar(this);
-                });
-            });
         });
-       
-    </script>
-<script src="../js/dashboard.js"></script>    
+    });
+</script>
+
+    <script src="../js/dashboard.js"></script>
 </body>
+
 </html>

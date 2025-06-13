@@ -34,6 +34,32 @@ header{
     background-color: white;
 }
 
+.btn-active{
+        padding: 10px 20px;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #0074ff;
+    border-radius: 0;
+    color: white;
+    margin-bottom: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.481)!important;
+}
+.btn-active:hover{
+    background-color: #479aff;
+}
+
+.texto-banner{
+        font-weight: 400;
+    text-shadow: 2px 2px 4px #000000ab;
+
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 transparent;
+}
+
 .trompetas {
     /* margin-top: -9px; */
     height: 269px;

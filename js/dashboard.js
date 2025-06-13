@@ -13,3 +13,5 @@ for (let i = 0; i < user.length; i++){
          progresoUser.textContent = `${user[i].progress}%`
     }
 }
+
+

@@ -17,6 +17,11 @@ a{
    
    
 }
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 transparent;
+}
 .arriba{
     width: 200px; 
     

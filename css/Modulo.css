@@ -6,6 +6,11 @@ a{
     width: 100%;
     margin: auto;
 }
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: 0 0 0 transparent;
+}
 .bg-header{
     position: fixed;
     top: 0;

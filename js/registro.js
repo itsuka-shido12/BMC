@@ -28,7 +28,8 @@ function registroDatos (e){
             },
             vientos: false,
             partituras: false
-        }
+        },
+        avatar: "../recursos/avatares/mabel.png"
     }
 
     console.log(inputUserName.value)
