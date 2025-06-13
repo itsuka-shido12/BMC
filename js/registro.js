@@ -29,7 +29,8 @@ function registroDatos (e){
             vientos: false,
             partituras: false
         },
-        avatar: "../recursos/avatares/mabel.png"
+        avatar: "../recursos/avatares/mabel.png",
+        nombreCertificado: ""
     }
 
     console.log(inputUserName.value)
